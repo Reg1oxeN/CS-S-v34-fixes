@@ -1,0 +1,37 @@
+"Games"
+{
+	"cstrike"
+	{
+		"Addresses"
+		{
+			"CPhysicsHook::LevelInitPreEntity"
+			{
+				"windows"
+				{
+					"signature" "CPhysicsHook::LevelInitPreEntity_Sig"				
+				}
+				"linux"
+				{
+					"signature" "CPhysicsHook::LevelInitPreEntity_Sig"
+				}
+			}
+		}
+		"Offsets"
+		{
+			"SetSimulationTimestepOffset"
+			{
+				"windows"		"168"
+				"linux"			"209"
+			}
+		}
+		"Signatures"
+		{
+			"CPhysicsHook::LevelInitPreEntity_Sig"
+			{
+				"library"		"server"
+				"windows"	"\x83\xEC\x18\x56\x57\x8B\xF9\x8B\x0D"
+				"linux"		"@_ZN12CPhysicsHook18LevelInitPreEntityEv"
+			}
+		}
+	}
+}

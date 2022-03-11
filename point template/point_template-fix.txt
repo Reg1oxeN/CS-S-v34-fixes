@@ -1,0 +1,24 @@
+"Games"
+{
+	"cstrike"
+	{
+		"Addresses"
+		{
+			"CPointTemplate_AllowNameFixup"
+			{
+				"linux"
+				{
+					"signature" "CPointTemplate_AllowNameFixup_Sig"
+				}
+			}
+		}
+		"Signatures"
+		{
+			"CPointTemplate_AllowNameFixup_Sig"
+			{
+				"library"		"server"
+				"linux"			"@_ZN14CPointTemplate14AllowNameFixupEv"
+			}
+		}
+	}
+}
