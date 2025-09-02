@@ -1,0 +1,59 @@
+"Games"
+{
+	"cstrike"
+	{
+		"Addresses"
+		{
+			"g_SendTableCRC"
+			{
+				"windows"
+				{
+					"signature" "g_SendTableCRC_Sig"				
+				}
+				"linux"
+				{
+					"signature" "g_SendTableCRC_Sig"
+				}
+			}
+			"g_pServerClassHead"
+			{
+				"windows"
+				{
+					"signature" "g_pServerClassHead_Sig"				
+				}
+				"linux"
+				{
+					"signature" "g_pServerClassHead_Sig"
+				}
+			}
+		}
+		"Offsets"
+		{
+			"g_SendTableCRCOffset"
+			{
+				"windows"		"1"
+				"linux"			"0"
+			}
+			"g_pServerClassHeadOffset"
+			{
+				"windows"		"2"
+				"linux"			"0"
+			}
+		}
+		"Signatures"
+		{
+			"g_SendTableCRC_Sig"
+			{
+				"library"		"engine"
+				"windows"		"\xA3\x2A\x2A\x2A\x2A\xFF\x15\x2A\x2A\x2A\x2A\x8B\x10\x68"
+				"linux"			"@g_SendTableCRC"
+			}
+			"g_pServerClassHead_Sig"
+			{
+				"library"		"server"
+				"windows"		"\x8B\x3D\x2A\x2A\x2A\x2A\x85\xFF\x75\x11"
+				"linux"			"@g_pServerClassHead"
+			}
+		}
+	}
+}
