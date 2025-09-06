@@ -202,10 +202,10 @@ enum struct ServerClassEditor
 	ServerClass FindServerClassHead(Handle hConfig)
 	{
 		Address headAddr = GameConfGetAddress(hConfig, "g_pServerClassHead");
-		Address offsetAddr = view_as<Address>(GameConfGetOffset(hConfig, "g_pServerClassHeadOffset"));
+		int offsetAddr = GameConfGetOffset(hConfig, "g_pServerClassHeadOffset");
 		
-		if (headAddr != Address_Null && offsetAddr != Address_Null)
-			headAddr = view_as<Address>(LoadFromAddress(headAddr + offsetAddr, NumberType_Int32));
+		if (headAddr != Address_Null && offsetAddr > 0)
+			headAddr = view_as<Address>(LoadFromAddress(headAddr + view_as<Address>(offsetAddr), NumberType_Int32));
 		
 		return view_as<ServerClass>(headAddr);
 	}
