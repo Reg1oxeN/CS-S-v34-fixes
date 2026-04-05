@@ -103,6 +103,12 @@ public Action OnNormalSound(int clients[64], int &numClients, char sample[PLATFO
 	if (entity <= MaxClients || !IsValidEntity(entity))
 		return Plugin_Continue;
 
+	if (flags != SND_NOFLAGS)
+		return Plugin_Continue;
+		
+	if (channel != SNDCHAN_WEAPON)
+		return Plugin_Continue;
+
 	int iOwner = g_iWeaponOwner[entity];
 	if (iOwner == 0)
 		return Plugin_Continue;
